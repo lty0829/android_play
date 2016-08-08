@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/wine_live"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/backact2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:text="←"
+            />
+        <TextView
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="酒店住宿"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+    <com.example.administrator.wulianshan.MyHorizontalScrollView
+        android:id="@+id/id_horizontalScrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@android:color/white"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/id_gallery2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </com.example.administrator.wulianshan.MyHorizontalScrollView>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:text="@string/abcwine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+</LinearLayout>

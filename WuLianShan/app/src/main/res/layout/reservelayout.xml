@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:background="@color/green">
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预定中心"
+            android:textColor="@color/white"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <Button
+                android:id="@+id/yu_trick"
+                android:onClick="doclick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button1"
+                android:text="门票"
+                android:textSize="30dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/white"
+                />
+            <ImageView
+                android:layout_width="4dp"
+                android:layout_height="50dp"
+                android:background="@color/white"/>
+
+            <Button
+                android:id="@+id/yu_wine"
+                android:onClick="doclick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="酒店"
+                android:textSize="30dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/button1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:background="@drawable/mapname5"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/gray"/>
+
+</LinearLayout>
