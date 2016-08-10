@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
 
             @Override
             public void run() {
-                Intent mainIntent = new Intent(MainActivity.this, MainPage.class);
+                Intent mainIntent = new Intent(MainActivity.this, LoadinActivity.class);
                 MainActivity.this.startActivity(mainIntent);
                 MainActivity.this.finish();
             }

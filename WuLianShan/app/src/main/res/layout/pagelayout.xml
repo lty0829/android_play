@@ -36,7 +36,9 @@
                 android:id="@+id/search02"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
 
                 <SearchView
                     android:id="@+id/find"
@@ -45,7 +47,9 @@
                     android:layout_height="wrap_content"
                     />
             </LinearLayout>
-
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/luotuo"
                 android:layout_width="match_parent"
@@ -53,7 +57,17 @@
                 android:background="@drawable/luotuo"
                 android:layout_marginBottom="10dp"
                     />
+                <TextView
+
+                    android:id="@+id/watch_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@drawable/textselector"
+                    android:clickable="true"/>
+            </RelativeLayout>
             <ImageView
+
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:background="@color/gray"/>

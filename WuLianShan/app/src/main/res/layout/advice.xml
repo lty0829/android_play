@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/add_content"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:minLines="8"	android:maxLines="10"
+        android:scrollbars="vertical"
+        android:background="@android:drawable/edit_text">
+
+    </EditText>
+    <Button
+        android:id="@+id/content_button"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button1"
+        android:text="发送"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+</LinearLayout>

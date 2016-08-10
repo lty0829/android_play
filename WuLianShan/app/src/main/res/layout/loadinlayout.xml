@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/backact4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:background="@drawable/button1"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:text="←"
+            />
+        <TextView
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="登陆账号"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+    <EditText
+        android:layout_marginTop="50dp"
+        android:id="@+id/username_ex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="手机号码/邮箱"/>
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/password_ex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="密码"/>
+
+    <Button
+        android:id="@+id/loadin_btton"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button1"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="登陆"
+        />
+
+</LinearLayout>

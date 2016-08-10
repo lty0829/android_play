@@ -3,6 +3,7 @@ package com.example.administrator.wulianshan;
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.database.DataSetObserver;
 import android.os.Bundle;
 import android.util.Log;
@@ -74,6 +75,17 @@ public class Myfragment extends Fragment {
         expandableListView.setDivider(null);
         adapter = new MyExpandableListViewAdapter(Myfragment.this.getActivity());
         expandableListView.setAdapter(adapter);
+        expandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+            @Override
+            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+                if(group_list.get(groupPosition).equals("设置")){
+                    Intent intent = new Intent(Myfragment.this.getActivity(),SetActivity.class);
+                    startActivity(intent);
+
+                }
+                return false;
+            }
+        });
         return view;
 
     }

@@ -2,18 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:focusable="true"
-    android:focusableInTouchMode="true">
+   >
     <SearchView
-        android:id="@+id/search_view_trip"
+        android:id="@+id/search_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:imeOptions="actionSearch">
+        android:imeOptions="actionSearch"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
     </SearchView>
 
     <ListView
-        android:id="@+id/trip_list"
+        android:id="@+id/search_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

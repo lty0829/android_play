@@ -1,8 +1,16 @@
 package com.example.administrator.wulianshan;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.URLSpan;
+import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +25,9 @@ import android.widget.ListAdapter;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -59,6 +70,7 @@ public class Pagefragment extends Fragment implements MyScrollView.OnScrollListe
     private boolean isMeasured1;
     private boolean high;
     private boolean low;
+    private TextView watch;
     LinearLayout search01,search02;
     RelativeLayout rlayout,rlayout1;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -77,6 +89,7 @@ public class Pagefragment extends Fragment implements MyScrollView.OnScrollListe
         isMeasured1=false;
         high=true;
         low=false;
+        initText(view);
         srollview(view);
         initgrid(view);
         setGridViewHeightBasedOnChildren(gridView);
@@ -90,11 +103,48 @@ public class Pagefragment extends Fragment implements MyScrollView.OnScrollListe
         return view;
 
     }
+    private void initText(View view){
+        watch= (TextView) view.findViewById(R.id.watch_text);
+
+
+        watch.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
+        watch.setText("3D,不一样的,给你");
+        watch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(Pagefragment.this.getActivity(),WebviewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+    }
+
     private void initEdit(View view){
         search_edit = (SearchView) view.findViewById(R.id.find);
         search_edit.setIconifiedByDefault(false);
         search_edit.setSubmitButtonEnabled(true);
         search_edit.setQueryHint("搜景点、酒店和游记");
+        search_edit.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Log.e("info","no");
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+        search_edit.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(hasFocus) {
+                    Intent intent1 = new Intent(Pagefragment.this.getActivity(), SearchActiviy.class);
+                    startActivity(intent1);
+                }
+            }
+        });
         myScrollView = (MyScrollView) view.findViewById(R.id.scroll);
         search01 = (LinearLayout)view.findViewById(R.id.search01);
         search02 = (LinearLayout)view.findViewById(R.id.search02);
@@ -250,7 +300,6 @@ public class Pagefragment extends Fragment implements MyScrollView.OnScrollListe
             map.put("name", iconName[i]);
             dataList.add(map);
         }
-        Log.i("Main", "size=" + dataList.size() + "sdsd" + drawable.length);
         return dataList;
     }
     public static void setGridViewHeightBasedOnChildren(GridView gridView) {

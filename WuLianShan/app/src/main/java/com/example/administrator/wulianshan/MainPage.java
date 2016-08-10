@@ -68,6 +68,14 @@ public class MainPage extends Activity implements RadioGroup.OnCheckedChangeList
                 beginTransaction.addToBackStack(null);
                 beginTransaction.commit();
             }
+            if((int)bundle.getInt("commont_cout")/10==5){
+                fifth.setChecked(true);
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction beginTransaction = fragmentManager.beginTransaction();
+                beginTransaction.replace(R.id.frame, myfragment);
+                beginTransaction.addToBackStack(null);
+                beginTransaction.commit();
+            }
         }
         group.setOnCheckedChangeListener(this);
     }
